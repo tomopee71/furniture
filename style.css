@@ -148,6 +148,7 @@ header {
   border-radius: 50%;
   justify-content: center;
   align-items: center;
+  /* font-size: 15p */
 }
 /* cartTab */
 
@@ -207,7 +208,7 @@ body.activeTabCart .container {
 }
 .listCart .item {
   display: grid;
-  grid-template-columns: 70px 150px 50px 1fr;
+  grid-template-columns: 70px 120px 50px 1fr;
   gap: 10px;
   align-items: center;
   text-align: center;
@@ -260,8 +261,18 @@ body.activeTabCart .container {
   header {
     padding: 0 25px;
   }
+  header .title a {
+    font-size: 25px;
+  }
+  .icon-cart span {
+    display: flex;
+  }
   .listProduct {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .listCart .item .name {
+    font-size: 12px;
   }
   .detail {
     grid-template-columns: 1fr;
