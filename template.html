@@ -24,11 +24,30 @@
       <div id="contentTab">Content in template file</div>
     </div>
     <div class="cartTab">
-      <h1>Shopping cart</h1>
+      <h1>お買い物カート</h1>
       <div class="listCart">show item here</div>
+      <div class="cartTotal">
+        <div class="totalRow subtotalRow">
+          <div class="totalLabel">小計</div>
+          <div class="subtotalPrice">￥0</div>
+        </div>
+        <div class="totalRow taxRow">
+          <div class="totalLabel">消費税</div>
+          <div class="taxPrice">￥0</div>
+        </div>
+        <div class="totalRow shippingRow">
+          <div class="totalLabel">送料</div>
+          <div class="shippingPrice">￥0</div>
+        </div>
+        <hr />
+        <div class="totalRow totalRowMain">
+          <div class="totalLabel">お支払い合計</div>
+          <div class="totalPrice">￥0</div>
+        </div>
+      </div>
       <div class="btn">
-        <button class="close">CLOSE</button>
-        <button class="checkOut">Check Out</button>
+        <button class="close">閉じる</button>
+        <button class="checkOut">確認画面へ</button>
       </div>
     </div>
     <!-- cart.js is imported in index.js as a module; no script tag needed here -->

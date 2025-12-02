@@ -36,7 +36,7 @@ button {
   border-radius: 20px;
 }
 .listProduct .item h2 {
-  font-size: large;
+  font-size: 12px;
   font-weight: 500;
 }
 .listProduct .item .price {
@@ -162,7 +162,7 @@ header {
   right: 0;
   bottom: 0;
   display: grid;
-  grid-template-rows: 70px 1fr 70px;
+  grid-template-rows: 70px 1fr 200px;
 }
 .cartTab h1 {
   padding: 20px;
@@ -173,6 +173,7 @@ header {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 2px;
+  height: 50px;
 }
 .cartTab .btn button {
   background-color: #e8bc0e;
@@ -185,6 +186,55 @@ header {
 }
 .cartTab .listCart {
   overflow: auto;
+}
+/* cart total */
+.cartTab .cartTotal {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+  font-weight: 700;
+}
+.cartTab .cartTotal .totalPrice {
+  font-size: 18px;
+}
+
+/* breakdown rows */
+.cartTab .cartTotal {
+  flex-direction: column;
+  align-items: flex-start;
+}
+.cartTab .cartTotal .totalRow {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 6px 0;
+}
+.cartTab .cartTotal .totalRow .totalLabel {
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.85);
+}
+.cartTab .cartTotal .subtotalRow .subtotalPrice,
+.cartTab .cartTotal .taxRow .taxPrice,
+.cartTab .cartTotal .shippingRow .shippingPrice,
+.cartTab .cartTotal .totalRowMain .totalPrice {
+  font-weight: 700;
+}
+.cartTab .cartTotal .totalRowMain {
+  padding-top: 8px;
+}
+.cartTab .cartTotal hr {
+  width: 100%;
+  border: none;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  margin: 6px;
+}
+.cartTab .btn .checkOut[disabled] {
+  opacity: 0.6;
+  cursor: not-allowed;
+  filter: grayscale(30%);
 }
 .cartTab .listCart::-webkit-scrollbar {
   width: 0;
@@ -214,6 +264,9 @@ body.activeTabCart .container {
   text-align: center;
   margin-top: 10px;
   padding: 5px;
+}
+.listCart .item .name {
+  font-size: 12px;
 }
 .listCart .item .quantity {
   display: flex;
@@ -245,6 +298,12 @@ body.activeTabCart .container {
 }
 .listCart .item:nth-child(even) {
   background-color: #eee1;
+}
+
+/* line item total in cart */
+.listCart .item .itemTotal {
+  font-weight: 600;
+  color: #fff;
 }
 
 /* ipad */

@@ -49,7 +49,7 @@ const initApp = async () => {
           <div class="price">${product.price.toLocaleString()}</div>
           <button class="addCart"
             data-id="${product.id}">
-            Add To Cart
+            カートに追加
           </button>`;
       listProduct.appendChild(newProduct);
 

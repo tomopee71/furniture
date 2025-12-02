@@ -94,7 +94,7 @@ const initApp = async () => {
             style: "currency",
             currency: "JPY",
           }).format(Number(product.price))}</div>
-          <button class="addCart" data-id="${product.id}">Add To Cart</button>
+          <button class="addCart" data-id="${product.id}">カートに追加</button>
         `;
           listProduct.appendChild(newProduct);
 
